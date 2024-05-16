@@ -86,8 +86,7 @@ struct ContentView: View {
         if number == correctAnswer {
             scoreTitle = "Correct"
             userScore += 1
-            countries.shuffle()
-            correctAnswer = Int.random(in: 0...2)
+            askQuestion()
         } else {
             scoreTitle = "Wrong! That's the flag of \(countries[number])"
             showingScore = true
